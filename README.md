@@ -43,8 +43,12 @@ reason a business record fails to verify.
 - **Brand:** Melta Labs / ميلتا لابز
 - **Email:** accounts@meltalabs.com
 - **Phone:** +20 101 532 4571  (`tel:+201015324571`, E.164)
-- **Address:** 1 Ahmed Bahgat St., Othman Towers, Tower 7, OC1, Middle Floor, Cairo, Egypt
-- **Founded:** 2024
+- **Address:** 1 Ahmed Bahgat St., Othman Towers, Tower 7, OC1, Fifth Floor, Maadi, Cairo, Egypt
+- **Founded:** 2025
+- **Commercial Register №:** 275628  ·  **Tax Registration №:** 769546358  ·  ISIC 6209 (IT services)
+
+All of the above are taken from the official Egyptian Commercial Register extract
+and Tax Authority taxpayer card — keep them byte-identical to those documents.
 
 ## Regenerating brand assets
 Icons and the OG card are generated, not hand-edited:
