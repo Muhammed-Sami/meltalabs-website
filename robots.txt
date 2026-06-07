@@ -1,0 +1,7 @@
+# https://meltalabs.com/robots.txt
+User-agent: *
+Allow: /
+
+# Site is fully indexable; no Disallow needed.
+
+Sitemap: https://meltalabs.com/sitemap.xml
