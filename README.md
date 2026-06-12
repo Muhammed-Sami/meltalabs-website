@@ -46,6 +46,7 @@ reason a business record fails to verify.
 - **Address:** 1 Ahmed Bahgat St., Othman Towers, Tower 7, OC1, Fifth Floor, Maadi, Cairo, Egypt
 - **Founded:** 2025
 - **Commercial Register №:** 275628  ·  **Tax Registration №:** 769546358  ·  ISIC 6209 (IT services)
+- **D-U-N-S №:** 849225135
 
 All of the above are taken from the official Egyptian Commercial Register extract
 and Tax Authority taxpayer card — keep them byte-identical to those documents.
