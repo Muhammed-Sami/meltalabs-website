@@ -196,10 +196,10 @@ main[tabindex="-1"]:focus { outline: none; }
 }
 .header-bar { display: flex; align-items: center; gap: var(--space-5); block-size: 72px; }
 
-.brand { display: inline-flex; align-items: center; gap: var(--space-3); color: var(--color-ink-900); font-family: var(--font-heading); font-weight: 700; font-size: var(--fs-md); }
+.brand { display: inline-flex; align-items: center; gap: var(--space-2); color: var(--color-ink-900); font-family: var(--font-heading); font-weight: 700; font-size: var(--fs-md); }
 .brand:hover { color: var(--color-ink-900); }
-.brand__mark { inline-size: 36px; block-size: 36px; border-radius: var(--radius-sm); background: var(--color-accent-600); display: grid; place-items: center; flex: none; }
-.brand__mark svg { inline-size: 22px; block-size: 22px; }
+.brand__logo { display: block; block-size: 36px; inline-size: auto; aspect-ratio: 100 / 42; flex: none; }
+.brand__suffix { font-size: var(--fs-md); }
 
 .primary-nav { margin-inline-start: auto; }
 .primary-nav ul { display: flex; align-items: center; gap: var(--space-6); }

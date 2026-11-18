@@ -108,8 +108,8 @@ _apple_path = os.path.join(ROOT, "apple-touch-icon.png")
 _apple.save(_apple_path, "PNG")
 print("wrote", os.path.relpath(_apple_path, ROOT))
 
-# Favicon .ico (16/32/48): "m" monogram, the full word is illegible that small
-master = rounded_tile(256, text="m")
+# Favicon .ico (16/32/48): same "melta" tile as everywhere else
+master = rounded_tile(256)
 ico_path = os.path.join(ROOT, "favicon.ico")
 master.save(ico_path, sizes=[(16, 16), (32, 32), (48, 48)])
 print("wrote", os.path.relpath(ico_path, ROOT))
