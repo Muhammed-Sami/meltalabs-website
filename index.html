@@ -46,9 +46,10 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400;500&family=Readex+Pro:wght@300..700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="/assets/styles.css" />
+  <script>document.documentElement.classList.add('js')</script>
 
   <!-- Structured data -->
   <script type="application/ld+json">
@@ -117,20 +118,20 @@
       <nav class="primary-nav" id="primary-nav" aria-label="Primary">
         <ul>
           <li><a href="#services">Services</a></li>
+          <li><a href="#process">Process</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <a class="btn btn--primary btn--sm" href="#contact">Get in touch</a>
+        <a class="btn btn--primary btn--sm" href="#contact">Start a project</a>
         <div class="lang-toggle" role="group" aria-label="Language">
           <a href="/" aria-current="true" lang="en">EN</a>
           <a href="/ar/" hreflang="ar" lang="ar">ع</a>
         </div>
         <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
-          <svg class="icon-open" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-          <svg class="icon-close" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="icon-open" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="icon-close" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </button>
       </div>
     </div>
@@ -141,126 +142,180 @@
     <section class="hero" aria-labelledby="hero-h">
       <div class="container hero__grid">
         <div>
-          <span class="eyebrow">Software Development Company</span>
-          <h1 id="hero-h">Reliable software, engineered in Cairo for businesses everywhere</h1>
-          <p class="hero__lead">Melta Labs is a software development company that designs, builds, and maintains reliable web and mobile applications for businesses.</p>
+          <span class="pill"><span class="pill__dot" aria-hidden="true"></span>Software development company · Cairo, Egypt</span>
+          <h1 id="hero-h">Reliable software, <span class="grad">built to last.</span></h1>
+          <p class="hero__lead">Melta Labs designs, builds, and maintains web and mobile applications for businesses — from the first idea to launch and long after.</p>
           <div class="hero__cta">
-            <a class="btn btn--primary" href="#contact">Get in touch</a>
-            <a class="btn btn--ghost" href="#services">Our services</a>
+            <a class="btn btn--primary" href="#contact">Start a project <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="btn btn--ghost" href="#services">Explore services</a>
           </div>
           <p class="trust-strip">
-            <span><bdi dir="ltr">Melta for Information Technology LLC</bdi></span>
-            <span>Maadi, Cairo, Egypt</span>
-            <span>Est. 2025</span>
+            <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><bdi dir="ltr">Melta for Information Technology LLC</bdi></span>
+            <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Established 2025</span>
+            <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>D-U-N-S <bdi dir="ltr">849225135</bdi></span>
           </p>
         </div>
-        <aside class="capability-panel" aria-label="Capabilities">
-          <h2>Capabilities</h2>
-          <ul class="capability-list">
-            <li><span class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.75"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" stroke="currentColor" stroke-width="1.75"/></svg></span><span>Web &amp; mobile applications</span></li>
-            <li><span class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.75"/><path d="M8 20h8" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></span><span>Backend systems &amp; APIs</span></li>
-            <li><span class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 18a4 4 0 0 1 0-8 5 5 0 0 1 9.6-1.6A3.5 3.5 0 0 1 18 18H6Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg></span><span>Cloud &amp; DevOps</span></li>
-            <li><span class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 17l-4.9 2.6.9-5.5-4-3.9 5.5-.8L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span><span>Product design &amp; UX</span></li>
+        <div class="hero-card reveal" aria-hidden="true">
+          <div class="hero-card__bar"><i></i><i></i><i></i><span>project-roadmap</span></div>
+          <h2>Your product, step by step</h2>
+          <ul class="pipeline">
+              <li class="is-done">
+                <span class="pipeline__icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <div><strong>Discover</strong><small>Goals, users &amp; scope</small></div>
+                <span class="badge">Done</span>
+              </li>
+              <li class="is-done">
+                <span class="pipeline__icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <div><strong>Design</strong><small>Flows &amp; interface</small></div>
+                <span class="badge">Done</span>
+              </li>
+              <li class="is-active">
+                <span class="pipeline__icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle class="pulse" cx="12" cy="12" r="4.5" fill="currentColor"/></svg></span>
+                <div><strong>Build</strong><small>Web, mobile &amp; APIs</small></div>
+                <span class="badge">In progress</span>
+                <div class="progress"><span></span></div>
+              </li>
+              <li class="is-next">
+                <span class="pipeline__icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2" stroke-dasharray="3 3"/></svg></span>
+                <div><strong>Launch</strong><small>Release &amp; support</small></div>
+                <span class="badge">Next</span>
+              </li>
           </ul>
-        </aside>
+          <div class="chips"><span class="chip">iOS</span><span class="chip">Android</span><span class="chip">Web</span><span class="chip">APIs</span><span class="chip">Cloud</span></div>
+        </div>
       </div>
     </section>
 
     <!-- Services -->
-    <section class="section section--band" id="services" aria-labelledby="services-h">
+    <section class="section" id="services" aria-labelledby="services-h">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">What we do</span>
-          <h2 id="services-h">Our Services</h2>
-          <p>End-to-end software development, from idea to production and beyond.</p>
+        <div class="section-head reveal">
+          <span class="eyebrow">Services</span>
+          <h2 id="services-h">Everything you need to ship a great product</h2>
+          <p>One team for design, engineering, and operations, so nothing gets lost between handoffs.</p>
         </div>
         <ul class="card-grid">
-          <li class="service-card">
-            <span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.75"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" stroke="currentColor" stroke-width="1.75"/></svg></span>
-            <h3>Web Development</h3>
-            <p>Fast, secure, and scalable websites and web applications built with modern frameworks and best practices.</p>
+          <li class="service-card reveal">
+            <span class="service-card__num" aria-hidden="true">01</span>
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.75"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18" stroke="currentColor" stroke-width="1.75"/></svg></span>
+            <h3>Web development</h3>
+            <p>Fast, secure websites and web apps built on modern, well-supported technology.</p>
           </li>
-          <li class="service-card">
-            <span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="7" y="3" width="10" height="18" rx="2.5" stroke="currentColor" stroke-width="1.75"/><path d="M11 18h2" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></span>
-            <h3>Mobile Apps</h3>
-            <p>Native and cross-platform mobile applications for iOS and Android, designed for performance and reliability.</p>
+          <li class="service-card reveal">
+            <span class="service-card__num" aria-hidden="true">02</span>
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2.5" stroke="currentColor" stroke-width="1.75"/><path d="M11 18h2" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></span>
+            <h3>Mobile apps</h3>
+            <p>Native and cross-platform apps for iOS and Android, designed for speed and stability.</p>
           </li>
-          <li class="service-card">
-            <span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="7" rx="1.6" stroke="currentColor" stroke-width="1.75"/><rect x="3" y="13" width="18" height="7" rx="1.6" stroke="currentColor" stroke-width="1.75"/><path d="M7 7.5h.01M7 16.5h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <li class="service-card reveal">
+            <span class="service-card__num" aria-hidden="true">03</span>
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="1.6" stroke="currentColor" stroke-width="1.75"/><rect x="3" y="13" width="18" height="7" rx="1.6" stroke="currentColor" stroke-width="1.75"/><path d="M7 7.5h.01M7 16.5h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
             <h3>Backend &amp; APIs</h3>
-            <p>Robust server-side systems, cloud infrastructure, and APIs that power your products at scale.</p>
+            <p>Secure APIs, databases, and integrations that keep your product running as it grows.</p>
           </li>
-          <li class="service-card">
-            <span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 16.5 14 6.5l3.5 3.5L7.5 20 4 20.5l.5-4Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><path d="M14 6.5 17 3.5 20.5 7 17.5 10" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg></span>
-            <h3>UI/UX Design</h3>
-            <p>Clean, intuitive interfaces and user experiences that make your software a pleasure to use.</p>
+          <li class="service-card reveal">
+            <span class="service-card__num" aria-hidden="true">04</span>
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 16.5 14 6.5l3.5 3.5L7.5 20 4 20.5l.5-4Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><path d="M14 6.5 17 3.5 20.5 7 17.5 10" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg></span>
+            <h3>UI/UX design</h3>
+            <p>Clear, accessible interfaces shaped around how your users actually work.</p>
           </li>
-          <li class="service-card">
-            <span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 18a4 4 0 0 1 0-8 5 5 0 0 1 9.6-1.6A3.5 3.5 0 0 1 18 18H6Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg></span>
+          <li class="service-card reveal">
+            <span class="service-card__num" aria-hidden="true">05</span>
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 18a4 4 0 0 1 0-8 5 5 0 0 1 9.6-1.6A3.5 3.5 0 0 1 18 18H6Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg></span>
             <h3>Cloud &amp; DevOps</h3>
-            <p>Deployment automation, monitoring, and cloud architecture for dependable, always-on services.</p>
+            <p>Automated deployments, monitoring, and cloud infrastructure that keep your services online.</p>
           </li>
-          <li class="service-card">
-            <span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H9l-4 3v-3H4V5Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></span>
-            <h3>Consulting</h3>
-            <p>Technical guidance and software strategy to help your business make the right engineering decisions.</p>
+          <li class="service-card reveal">
+            <span class="service-card__num" aria-hidden="true">06</span>
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5h16v11H9l-4 3v-3H4V5Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg></span>
+            <h3>Technical consulting</h3>
+            <p>Architecture reviews, technical planning, and straight answers before you commit a budget.</p>
           </li>
         </ul>
       </div>
     </section>
 
+    <!-- Process -->
+    <section class="section section--tint" id="process" aria-labelledby="process-h">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">How we work</span>
+          <h2 id="process-h">A clear process, from first call to launch</h2>
+          <p>You always know what we're working on, what's next, and what it costs.</p>
+        </div>
+        <ol class="steps-grid" role="list">
+          <li class="process-step reveal">
+            <span class="process-step__num" aria-hidden="true">01</span>
+            <h3>Discover</h3>
+            <p>We learn your goals, users, and constraints, then agree on scope, timeline, and cost.</p>
+          </li>
+          <li class="process-step reveal">
+            <span class="process-step__num" aria-hidden="true">02</span>
+            <h3>Design</h3>
+            <p>We map the user flows and design the interface, and you approve it before any code is written.</p>
+          </li>
+          <li class="process-step reveal">
+            <span class="process-step__num" aria-hidden="true">03</span>
+            <h3>Build</h3>
+            <p>We develop in short cycles with regular demos, so you see real progress every step of the way.</p>
+          </li>
+          <li class="process-step reveal">
+            <span class="process-step__num" aria-hidden="true">04</span>
+            <h3>Launch &amp; support</h3>
+            <p>We release to production, monitor closely, and keep improving the product after launch.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
     <!-- About -->
     <section class="section" id="about" aria-labelledby="about-h">
-      <div class="container">
-        <div class="about__top">
-          <div class="about__narrative">
-            <span class="eyebrow">Who we are</span>
-            <h2 id="about-h">About Melta Labs</h2>
-            <p><bdi dir="ltr">Melta for Information Technology LLC</bdi>, operating as Melta Labs, is a software development company dedicated to building high-quality digital products. We partner with businesses to turn ideas into reliable, well-engineered software.</p>
-            <p>Our team combines strong engineering with thoughtful design to deliver web and mobile solutions that are fast, secure, and built to last.</p>
-          </div>
-          <dl class="facts" aria-label="Company facts">
+      <div class="container about">
+        <div class="about__narrative reveal">
+          <span class="eyebrow">About us</span>
+          <h2 id="about-h">A software company built on doing the work well</h2>
+            <p><bdi dir="ltr">Melta for Information Technology LLC</bdi>, operating as Melta Labs, is a software development company based in Maadi, Cairo. We partner with businesses to turn ideas into reliable, well-engineered products.</p>
+            <p>Our team pairs solid engineering with thoughtful design, and we write software the way we would want to maintain it: clean, documented, and secure.</p>
+          <ul class="principles">
+              <li><span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5v-8Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg></span><div><strong>Clear communication</strong><span>One point of contact, regular updates, and no surprises.</span></div></li>
+              <li><span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 5 6v5.5c0 4.4 3 8 7 9.5 4-1.5 7-5.1 7-9.5V6l-7-3Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>Quality by default</strong><span>Code reviews, automated testing, and security built in from day one.</span></div></li>
+              <li><span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 12a8 8 0 0 1-13.7 5.6M4 12a8 8 0 0 1 13.7-5.6" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/><path d="M18 3v4h-4M6 21v-4h4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><strong>Long-term partnership</strong><span>We support and improve what we build, long after launch.</span></div></li>
+          </ul>
+        </div>
+        <dl class="facts reveal" aria-label="Company facts">
+          <div class="facts__title">Company details</div>
             <div class="facts__row"><dt class="facts__label">Legal name</dt><dd class="facts__value"><bdi dir="ltr">Melta for Information Technology LLC</bdi></dd></div>
             <div class="facts__row"><dt class="facts__label">Founded</dt><dd class="facts__value">2025</dd></div>
             <div class="facts__row"><dt class="facts__label">Headquarters</dt><dd class="facts__value">Maadi, Cairo, Egypt</dd></div>
             <div class="facts__row"><dt class="facts__label">Commercial Register</dt><dd class="facts__value">275628</dd></div>
             <div class="facts__row"><dt class="facts__label">Tax Registration</dt><dd class="facts__value">769546358</dd></div>
             <div class="facts__row"><dt class="facts__label">D-U-N-S Number</dt><dd class="facts__value">849225135</dd></div>
-            <div class="facts__row"><dt class="facts__label">Focus</dt><dd class="facts__value">Web &amp; Mobile software</dd></div>
-          </dl>
-        </div>
-        <div class="stats">
-          <div class="stat"><span class="stat__num">2025</span><span class="stat__label">Established</span></div>
-          <div class="stat"><span class="stat__num">Cairo</span><span class="stat__label">Egypt · Headquarters</span></div>
-          <div class="stat"><span class="stat__num">Web · Mobile</span><span class="stat__label">Core platforms</span></div>
-          <div class="stat"><span class="stat__num">EN · AR</span><span class="stat__label">Languages supported</span></div>
-        </div>
+            <div class="facts__row"><dt class="facts__label">Focus</dt><dd class="facts__value">Web and mobile software</dd></div>
+        </dl>
       </div>
     </section>
 
     <!-- Contact -->
-    <section class="section section--band" id="contact" aria-labelledby="contact-h">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Get in touch</span>
-          <h2 id="contact-h">Contact Us</h2>
-          <p>We would love to hear about your project. Reach out through any of the channels below.</p>
+    <section class="section contact" id="contact" aria-labelledby="contact-h">
+      <div class="container contact__inner">
+        <div class="contact__intro reveal">
+          <span class="eyebrow">Contact</span>
+          <h2 id="contact-h">Have a project in mind?</h2>
+          <p>Tell us what you're building, and we'll get back to you with clear next steps.</p>
+          <a class="btn btn--light btn--lg" href="mailto:accounts@meltalabs.com">Email us <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
-        <address class="card-grid">
+        <address class="contact-list reveal">
           <div class="contact-card">
-            <span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.75"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg></span>
-            <span class="contact-card__label">Email</span>
-            <div class="contact-card__value"><a href="mailto:accounts@meltalabs.com">accounts@meltalabs.com</a></div>
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.75"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg></span>
+            <div><span class="contact-card__label">Email</span><div class="contact-card__value"><a href="mailto:accounts@meltalabs.com">accounts@meltalabs.com</a></div></div>
           </div>
           <div class="contact-card">
-            <span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3h3l1.5 5-2 1.5a12 12 0 0 0 6 6l1.5-2 5 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg></span>
-            <span class="contact-card__label">Phone</span>
-            <div class="contact-card__value"><a class="phone" href="tel:+201015324571"><bdi dir="ltr">+20 101 532 4571</bdi></a></div>
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 3h3l1.5 5-2 1.5a12 12 0 0 0 6 6l1.5-2 5 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/></svg></span>
+            <div><span class="contact-card__label">Phone</span><div class="contact-card__value"><a class="phone" href="tel:+201015324571"><bdi dir="ltr">+20 101 532 4571</bdi></a></div></div>
           </div>
           <div class="contact-card">
-            <span class="icon-tile" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.75"/></svg></span>
-            <span class="contact-card__label">Address</span>
-            <div class="contact-card__value">1 Ahmed Bahgat St., Othman Towers, Tower 7, OC1, Fifth Floor, Maadi, Cairo, Egypt</div>
+            <span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.75"/></svg></span>
+            <div><span class="contact-card__label">Office</span><div class="contact-card__value">1 Ahmed Bahgat St., Othman Towers, Tower 7, OC1, Fifth Floor, Maadi, Cairo, Egypt</div></div>
           </div>
         </address>
       </div>
@@ -274,19 +329,20 @@
           <a class="brand" href="/" aria-label="Melta Labs — home">
             <svg class="brand__logo" viewBox="0 29 100 42" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="0" y="29" width="100" height="42" rx="9" fill="#1E63D8"/><path d="M11.00 61.29L11.00 44.74L15.24 44.74L15.24 48.77L14.79 48.11Q15.15 46.20 16.55 45.29Q17.94 44.38 19.88 44.38Q21.94 44.38 23.50 45.42Q25.06 46.47 25.45 48.23L24.15 48.35Q24.97 46.32 26.48 45.35Q28.00 44.38 30.03 44.38Q31.82 44.38 33.20 45.17Q34.58 45.95 35.36 47.36Q36.15 48.77 36.15 50.65L36.15 61.29L31.61 61.29L31.61 51.62Q31.61 50.65 31.26 49.95Q30.91 49.26 30.27 48.86Q29.64 48.47 28.73 48.47Q27.85 48.47 27.20 48.86Q26.55 49.26 26.20 49.95Q25.85 50.65 25.85 51.62L25.85 61.29L21.30 61.29L21.30 51.62Q21.30 50.65 20.95 49.95Q20.61 49.26 19.97 48.86Q19.33 48.47 18.42 48.47Q17.55 48.47 16.89 48.86Q16.24 49.26 15.89 49.95Q15.55 50.65 15.55 51.62L15.55 61.29ZM46.21 61.65Q43.58 61.65 41.64 60.48Q39.70 59.32 38.64 57.35Q37.58 55.38 37.58 52.98Q37.58 50.50 38.68 48.56Q39.79 46.62 41.67 45.50Q43.55 44.38 45.91 44.38Q47.88 44.38 49.39 45.00Q50.91 45.62 51.95 46.74Q53.00 47.86 53.55 49.33Q54.09 50.80 54.09 52.53Q54.09 53.02 54.05 53.48Q54.00 53.95 53.88 54.29L41.48 54.29L41.48 50.95L51.30 50.95L49.15 52.53Q49.45 51.23 49.12 50.21Q48.79 49.20 47.95 48.61Q47.12 48.02 45.91 48.02Q44.73 48.02 43.88 48.59Q43.03 49.17 42.61 50.29Q42.18 51.41 42.27 53.02Q42.15 54.41 42.61 55.47Q43.06 56.53 44.00 57.12Q44.94 57.71 46.27 57.71Q47.48 57.71 48.35 57.23Q49.21 56.74 49.70 55.89L53.33 57.62Q52.85 58.83 51.80 59.74Q50.76 60.65 49.33 61.15Q47.91 61.65 46.21 61.65ZM55.85 61.29L55.85 38.35L60.39 38.35L60.39 61.29ZM70.79 61.47Q67.79 61.47 66.14 59.85Q64.48 58.23 64.48 55.32L64.48 48.68L61.70 48.68L61.70 44.74L61.85 44.74Q63.12 44.74 63.80 44.11Q64.48 43.47 64.48 42.20L64.48 40.98L69.03 40.98L69.03 44.74L72.91 44.74L72.91 48.68L69.03 48.68L69.03 55.02Q69.03 55.86 69.33 56.42Q69.64 56.98 70.27 57.26Q70.91 57.53 71.85 57.53Q72.06 57.53 72.33 57.50Q72.61 57.47 72.91 57.44L72.91 61.29Q72.45 61.35 71.88 61.41Q71.30 61.47 70.79 61.47ZM79.79 61.65Q78.00 61.65 76.70 61.08Q75.39 60.50 74.70 59.42Q74.00 58.35 74.00 56.86Q74.00 55.47 74.64 54.39Q75.27 53.32 76.59 52.59Q77.91 51.86 79.88 51.56L84.94 50.74L84.94 54.08L80.70 54.83Q79.73 55.02 79.21 55.45Q78.70 55.89 78.70 56.71Q78.70 57.47 79.27 57.89Q79.85 58.32 80.70 58.32Q81.82 58.32 82.67 57.83Q83.52 57.35 83.98 56.52Q84.45 55.68 84.45 54.68L84.45 50.38Q84.45 49.44 83.71 48.80Q82.97 48.17 81.70 48.17Q80.48 48.17 79.56 48.83Q78.64 49.50 78.21 50.59L74.58 48.86Q75.06 47.47 76.12 46.47Q77.18 45.47 78.67 44.92Q80.15 44.38 81.91 44.38Q84.00 44.38 85.61 45.14Q87.21 45.89 88.11 47.24Q89.00 48.59 89.00 50.38L89.00 61.29L84.76 61.29L84.76 58.62L85.79 58.44Q85.06 59.53 84.18 60.24Q83.30 60.95 82.21 61.30Q81.12 61.65 79.79 61.65Z" fill="#fff"/></svg>
           </a>
-          <p>A software development company building reliable web and mobile applications for businesses.</p>
+          <p>Reliable web and mobile software, made in Cairo.</p>
         </div>
         <nav class="footer-col" aria-label="Footer">
           <h2>Company</h2>
           <ul>
             <li><a href="#services">Services</a></li>
+            <li><a href="#process">Process</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/privacy.html">Privacy policy</a></li>
           </ul>
         </nav>
         <div class="footer-col">
-          <h2>Languages</h2>
+          <h2>Language</h2>
           <ul>
             <li><a href="/" lang="en">English</a></li>
             <li><a href="/ar/" hreflang="ar" lang="ar">العربية</a></li>
@@ -297,7 +353,7 @@
         <address>
           <span class="strong"><bdi dir="ltr">Melta for Information Technology LLC</bdi></span><br />
           1 Ahmed Bahgat St., Othman Towers, Tower 7, OC1, Fifth Floor, Maadi, Cairo, Egypt<br />
-          Commercial Register No. <bdi dir="ltr">275628</bdi> · Tax Reg. No. <bdi dir="ltr">769546358</bdi> · D-U-N-S No. <bdi dir="ltr">849225135</bdi><br />
+          Commercial Register No. <bdi dir="ltr">275628</bdi> · Tax Registration No. <bdi dir="ltr">769546358</bdi> · D-U-N-S No. <bdi dir="ltr">849225135</bdi><br />
           <a class="phone" href="tel:+201015324571"><bdi dir="ltr">+20 101 532 4571</bdi></a> ·
           <a href="mailto:accounts@meltalabs.com">accounts@meltalabs.com</a>
         </address>
@@ -313,13 +369,12 @@
     var header = document.getElementById('site-header');
     var ticking = false;
     function onScroll() {
-      if (!ticking) {
-        window.requestAnimationFrame(function () {
-          header.classList.toggle('is-scrolled', window.scrollY > 8);
-          ticking = false;
-        });
-        ticking = true;
-      }
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () {
+        header.classList.toggle('is-scrolled', window.scrollY > 8);
+        ticking = false;
+      });
     }
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
@@ -327,26 +382,29 @@
     // Mobile menu
     var toggle = document.getElementById('nav-toggle');
     var nav = document.getElementById('primary-nav');
-    toggle.addEventListener('click', function () {
-      var open = nav.classList.toggle('is-open');
+    function setMenu(open) {
+      nav.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', String(open));
       toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    });
-    nav.addEventListener('click', function (e) {
-      if (e.target.closest('a')) {
-        nav.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open menu');
-      }
-    });
+    }
+    toggle.addEventListener('click', function () { setMenu(!nav.classList.contains('is-open')); });
+    nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && nav.classList.contains('is-open')) {
-        nav.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.setAttribute('aria-label', 'Open menu');
-        toggle.focus();
-      }
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) { setMenu(false); toggle.focus(); }
     });
+
+    // Reveal on scroll
+    var items = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+      items.forEach(function (el, i) { el.style.transitionDelay = (i % 3) * 70 + 'ms'; io.observe(el); });
+    } else {
+      items.forEach(function (el) { el.classList.add('is-in'); });
+    }
   </script>
 </body>
 </html>

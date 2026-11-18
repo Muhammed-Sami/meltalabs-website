@@ -3,8 +3,10 @@
 Bilingual (English + Arabic / RTL) company website for **Melta for Information
 Technology LLC** (Melta Labs). Static HTML/CSS/vanilla JS — no build step —
 hosted on GitHub Pages with the custom domain `meltalabs.com`. The visual system
-is a light, enterprise "Trust-First" design intended to read as a legitimate,
-established IT company in support of a Dun & Bradstreet (D-U-N-S) registration.
+is a light, modern design (2026): logo blue `#1E63D8` with ink `#0A0E1A`, a
+violet gradient accent, Geist / Geist Mono for Latin and Readex Pro for Arabic.
+It keeps the company facts prominent in support of the Dun & Bradstreet
+(D-U-N-S) registration.
 
 ## Structure
 ```
