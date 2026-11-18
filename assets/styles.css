@@ -199,7 +199,6 @@ main[tabindex="-1"]:focus { outline: none; }
 .brand { display: inline-flex; align-items: center; gap: var(--space-2); color: var(--color-ink-900); font-family: var(--font-heading); font-weight: 700; font-size: var(--fs-md); }
 .brand:hover { color: var(--color-ink-900); }
 .brand__logo { display: block; block-size: 36px; inline-size: auto; aspect-ratio: 100 / 42; flex: none; }
-.brand__suffix { font-size: var(--fs-md); }
 
 .primary-nav { margin-inline-start: auto; }
 .primary-nav ul { display: flex; align-items: center; gap: var(--space-6); }
