@@ -13,39 +13,54 @@ ACCENT   = (30, 99, 216)    # #1E63D8
 WHITE    = (255, 255, 255)
 MUTED    = (160, 178, 204)
 
-# 'M' monogram polyline on a /64 grid (matches favicon.svg)
-M_PTS = [(14, 46), (14, 20), (32, 35), (50, 20), (50, 46)]
+# Brand mark: white "melta" wordmark (or "m" monogram at small sizes) in
+# Plus Jakarta Sans ExtraBold on an accent-blue tile. Font is vendored (OFL).
+FONT = os.path.join(ASSETS, "fonts", "PlusJakartaSans-Variable.ttf")
 SUPER = 4  # supersample factor for crisp anti-aliasing
 
 
-def _scale_pts(box, ox, oy):
-    """Scale the /64 M points into a square of side `box` at offset (ox,oy)."""
-    return [(ox + x / 64.0 * box, oy + y / 64.0 * box) for (x, y) in M_PTS]
+def brand_font(size):
+    f = ImageFont.truetype(FONT, size)
+    f.set_variation_by_axes([800])  # ExtraBold
+    return f
 
 
-def draw_mark(draw, box, ox, oy, stroke=WHITE):
-    pts = _scale_pts(box, ox, oy)
-    w = max(2, int(round(5.5 / 64.0 * box)))
-    draw.line(pts, fill=stroke, width=w, joint="curve")
-    r = w / 2.0
-    for (x, y) in pts:  # round the caps/joints
-        draw.ellipse([x - r, y - r, x + r, y + r], fill=stroke)
+def draw_word(draw, text, box, ox, oy, fill=WHITE, ink_ratio=0.80):
+    """Draw `text` so its ink spans `ink_ratio` of a `box` square, centred."""
+    f = brand_font(1000)
+    kern = -0.03 * 1000
+    widths = [f.getlength(ch) for ch in text]
+    total = sum(widths) + kern * (len(text) - 1)
+    # ink bounds of the whole run (first/last glyph side-bearings)
+    l0 = f.getbbox(text[0])[0]
+    r1 = widths[-1] - f.getbbox(text[-1])[2]
+    ink_w = total - l0 - r1
+    top = min(f.getbbox(ch)[1] for ch in text)
+    bot = max(f.getbbox(ch)[3] for ch in text)
+    k = box * ink_ratio / ink_w
+    f = brand_font(max(1, int(round(1000 * k))))
+    k = f.size / 1000.0
+    x = ox + (box - ink_w * k) / 2 - l0 * k
+    y = oy + (box - (bot - top) * k) / 2 - top * k
+    for ch, w in zip(text, widths):
+        draw.text((x, y), ch, font=f, fill=fill)
+        x += (w + kern) * k
 
 
-def rounded_tile(size, bg, radius_ratio=0.22, content_ratio=1.0, stroke=WHITE,
-                 full_bleed=False):
-    """Return an RGBA tile image of side `size` with the M monogram."""
+def rounded_tile(size, bg=None, radius_ratio=0.22, content_ratio=1.0,
+                 full_bleed=False, text="melta"):
+    """Return an RGBA tile of side `size` with the wordmark (or monogram)."""
+    bg = bg or ACCENT
     s = size * SUPER
     img = Image.new("RGBA", (s, s), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
     if full_bleed:
         d.rectangle([0, 0, s, s], fill=bg)
     else:
-        rad = int(radius_ratio * s)
-        d.rounded_rectangle([0, 0, s - 1, s - 1], radius=rad, fill=bg)
+        d.rounded_rectangle([0, 0, s - 1, s - 1], radius=int(radius_ratio * s), fill=bg)
     box = s * content_ratio
     off = (s - box) / 2.0
-    draw_mark(d, box, off, off, stroke=stroke)
+    draw_word(d, text, box, off, off, ink_ratio=0.80 if text != "m" else 0.66)
     return img.resize((size, size), Image.LANCZOS)
 
 
@@ -74,24 +89,27 @@ REG = [("/System/Library/Fonts/Supplemental/Arial.ttf", 0),
        ("/System/Library/Fonts/SFNS.ttf", 0)]
 
 # ---- App / favicon icons -----------------------------------------------------
-# Rounded navy tiles on transparent (manifest "any", logo)
+# Rounded accent tiles on transparent (manifest "any", logo)
 for size, name in [(192, "icon-192.png"), (512, "icon-512.png"),
                    (512, "logo-512.png")]:
-    save_png(rounded_tile(size, NAVY_800), name)
+    save_png(rounded_tile(size), name)
 
-# Maskable: full-bleed navy, M kept inside ~62% safe zone
-save_png(rounded_tile(512, NAVY_800, content_ratio=0.62, full_bleed=True),
+# Slack / social avatar: full-bleed 1024 (platforms apply their own mask)
+save_png(rounded_tile(1024, full_bleed=True), "avatar-1024.png")
+
+# Maskable: full-bleed, wordmark kept inside the ~80% safe zone
+save_png(rounded_tile(512, content_ratio=0.80, full_bleed=True),
          "icon-maskable-512.png")
 
-# Apple touch icon: full-bleed navy square (Apple applies its own mask).
+# Apple touch icon: full-bleed square (Apple applies its own mask).
 # Referenced at site ROOT (/apple-touch-icon.png), so write it there.
-_apple = rounded_tile(180, NAVY_800, content_ratio=0.78, full_bleed=True)
+_apple = rounded_tile(180, full_bleed=True)
 _apple_path = os.path.join(ROOT, "apple-touch-icon.png")
 _apple.save(_apple_path, "PNG")
 print("wrote", os.path.relpath(_apple_path, ROOT))
 
-# Favicon .ico (multi-size) + 32px png, written to repo ROOT
-master = rounded_tile(256, NAVY_800)
+# Favicon .ico (16/32/48): "m" monogram, the full word is illegible that small
+master = rounded_tile(256, text="m")
 ico_path = os.path.join(ROOT, "favicon.ico")
 master.save(ico_path, sizes=[(16, 16), (32, 32), (48, 48)])
 print("wrote", os.path.relpath(ico_path, ROOT))
@@ -109,11 +127,11 @@ def make_og():
     f_tag = load_font(REG, 40 * s)
     f_dom = load_font(REG, 30 * s)
 
-    # Monogram tile (rounded navy-800 with subtle accent border), left-aligned block
+    # Wordmark tile (rounded accent blue), left-aligned block
     tile = 150
     margin = 96
     cy = H // 2
-    tile_img = rounded_tile(tile, NAVY_800)
+    tile_img = rounded_tile(tile)
     # paste centered group: tile at top, text to the right
     brand = "Melta Labs"
     tag = "Software Development Company"

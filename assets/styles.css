@@ -198,7 +198,7 @@ main[tabindex="-1"]:focus { outline: none; }
 
 .brand { display: inline-flex; align-items: center; gap: var(--space-3); color: var(--color-ink-900); font-family: var(--font-heading); font-weight: 700; font-size: var(--fs-md); }
 .brand:hover { color: var(--color-ink-900); }
-.brand__mark { inline-size: 36px; block-size: 36px; border-radius: var(--radius-sm); background: var(--color-navy-800); display: grid; place-items: center; flex: none; }
+.brand__mark { inline-size: 36px; block-size: 36px; border-radius: var(--radius-sm); background: var(--color-accent-600); display: grid; place-items: center; flex: none; }
 .brand__mark svg { inline-size: 22px; block-size: 22px; }
 
 .primary-nav { margin-inline-start: auto; }

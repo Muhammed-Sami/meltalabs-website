@@ -56,6 +56,11 @@ Icons and the OG card are generated, not hand-edited:
 ```bash
 python3 assets/gen_assets.py     # requires Pillow (pip install pillow)
 ```
+Brand mark: white "melta" wordmark in Plus Jakarta Sans ExtraBold on an
+accent-blue (#1E63D8) tile; the "m" monogram is used where the word would be
+illegible (favicon, 36px header tile). The font is vendored under
+`assets/fonts/` (SIL OFL 1.1). `assets/avatar-1024.png` is the full-bleed
+version for Slack / social avatars.
 
 ## Local preview
 Use a local server so the root-absolute paths (`/assets/...`, `/ar/`) resolve:
